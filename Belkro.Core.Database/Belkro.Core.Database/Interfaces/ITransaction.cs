@@ -11,5 +11,7 @@ namespace Belkro.Core.Database.Interfaces
     /// </summary>
     public interface ITransaction
     {
+        void Save();
+        void Rollback();
     }
 }

@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\MicrosoftSqlQuery.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />
     <Compile Include="Implementation\DataEntry.cs" />
     <Compile Include="Interfaces\IDatabaseExecuter.cs" />

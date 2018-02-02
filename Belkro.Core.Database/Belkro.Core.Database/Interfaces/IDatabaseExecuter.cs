@@ -9,8 +9,13 @@ namespace Belkro.Core.Database.Interfaces
 {
     public interface IDatabaseExecuter
     {
-        IDictionary<Type, DataEntry> SelectMany(IDatabase aiDatabase, IQuery aiQuery);
-        IList<DataEntry> SelectManyAsList(IDatabase aiDatabase, IQuery aiQuery);
-        DataEntry Select(IDatabase aiDatabase, IQuery aiQuery);
+        IDatabase Database { get; set; }//The database that will be used
+        IDictionary<Type, DataEntry> SelectMany(IQuery aiQuery);//select-query that results into many entries with their type
+        IList<DataEntry> SelectManyAsList(IQuery aiQuery);//select-query that results into many entries as a simple List of results
+        DataEntry Select(IQuery aiQuery);//select-query that results into one entry
+        void Execute(IQuery aiQuery);//insert, update, delete with no results
+        DataEntry ExecuteWithResult(IQuery aiQuery);//insert, update, delete with one results
+        IDictionary<Type, DataEntry> ExecuteWithManyResults(IQuery aiQuery);//insert, update, delete with many results
+        IList<DataEntry> ExecuteWithManyResultsAsList(IQuery aiQuery);//insert, update, delete with many results
     }
 }
