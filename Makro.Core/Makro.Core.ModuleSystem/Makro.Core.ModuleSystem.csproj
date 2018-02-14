@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95727525-A191-4AFF-A147-0A66FCFABDD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Makro.Core.ModuleSystem</RootNamespace>
+    <AssemblyName>Makro.Core.ModuleSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel\Module.cs" />
+    <Compile Include="HelpClasses\DisposeImpl.cs" />
+    <Compile Include="HelpClasses\MagicNumbersSolver.cs" />
+    <Compile Include="HelpClasses\ModuleLogger.cs" />
+    <Compile Include="Implementation\AssemblyContainer.cs" />
+    <Compile Include="Implementation\BaseTimerBackgroundWorker.cs" />
+    <Compile Include="Implementation\TimerBackgroundWorker.cs" />
+    <Compile Include="Implementation\DotNetModuleInstance.cs" />
+    <Compile Include="Implementation\TimerTestModul.cs" />
+    <Compile Include="nsInterfaces\IBackgroundWorker.cs" />
+    <Compile Include="nsInterfaces\IExtensionProxy.cs" />
+    <Compile Include="nsInterfaces\IModule.cs" />
+    <Compile Include="nsInterfaces\IModuleInstance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Makro.Core.Logging\Makro.Core.Logging.csproj">
+      <Project>{B89768AF-D561-48A8-9EDF-79A8559877F6}</Project>
+      <Name>Makro.Core.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Makro.Core.Serialization\Makro.Core.Serialization.csproj">
+      <Project>{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}</Project>
+      <Name>Makro.Core.Serialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

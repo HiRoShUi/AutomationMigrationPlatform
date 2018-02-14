@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.ModuleSystem", "Makro.Core.ModuleSystem\Makro.Core.ModuleSystem.csproj", "{95727525-A191-4AFF-A147-0A66FCFABDD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.ConsoleTester", "Makro.Core.ConsoleTester\Makro.Core.ConsoleTester.csproj", "{D8501660-7DCD-4B2D-AF00-4E10903B8D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Settings", "Makro.Core.Settings\Makro.Core.Settings.csproj", "{9420B7D0-31E3-4343-8A43-5EC3176820E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Serialization", "Makro.Core.Serialization\Makro.Core.Serialization.csproj", "{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Logging", "Makro.Core.Logging\Makro.Core.Logging.csproj", "{B89768AF-D561-48A8-9EDF-79A8559877F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95727525-A191-4AFF-A147-0A66FCFABDD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95727525-A191-4AFF-A147-0A66FCFABDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95727525-A191-4AFF-A147-0A66FCFABDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95727525-A191-4AFF-A147-0A66FCFABDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8501660-7DCD-4B2D-AF00-4E10903B8D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8501660-7DCD-4B2D-AF00-4E10903B8D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8501660-7DCD-4B2D-AF00-4E10903B8D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8501660-7DCD-4B2D-AF00-4E10903B8D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9420B7D0-31E3-4343-8A43-5EC3176820E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9420B7D0-31E3-4343-8A43-5EC3176820E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9420B7D0-31E3-4343-8A43-5EC3176820E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9420B7D0-31E3-4343-8A43-5EC3176820E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
