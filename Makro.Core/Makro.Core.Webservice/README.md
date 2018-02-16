@@ -9,7 +9,7 @@ Example of use:
             var assembly = Assembly.LoadFrom("<dll-file where a few controllers are implemented with the basic-class 'IBasicController'>");
             service.AddControllerAssembly(assembly);
             service.Start(Webservice.Implementation.Enums.Protocol.http,"localhost",5112);
-```csharp
+```
 
 			This would start a webservice running with OWIN on port 5112 on the localhost for http. The default webservice would only contain a HealthCheck-Controller under resource "http://localhost:5112/api/HealthCheck" which returns a HttpStatusCode.Ok if a get has been performed.
 			
@@ -23,6 +23,6 @@ Example of use:
 					return Ok(new[] { "Testcontroller is up and running on " + Environment.MachineName });
 				}
 			}
-			```csharp
+			```
 
 (C) by MaKro
