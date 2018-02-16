@@ -11,6 +11,9 @@ using Makro.Core.Settings.Implementation;
 using System.Threading;
 using Makro.Core.Serialization.Implementation;
 using System.IO;
+using Makro.Core.Webservice;
+using System.Net.Http;
+using System.Reflection;
 
 namespace Makro.Core.ConsoleTester
 {
@@ -27,7 +30,13 @@ namespace Makro.Core.ConsoleTester
             //IModuleInstance moduleInstance = new DotNetModuleInstance(assemblyName, settings.RetrieveProperty("CurrentModule_Name").Value.ToString(), interval, isWorkerActive);
             //moduleInstance.Start();
 
-            Makro.Core.ModuleSystem.StartUp.Execute("ModuleConfig.conf");
+            Makro.Core.Webservice.Implementation.Webservice service = new Webservice.Implementation.Webservice();
+
+            var assembly = Assembly.LoadFrom(@"C:\Users\Administrator\Documents\Visual Studio 2015\Git\AutomationMigrationPlatform\Makro.Core\Makro.Core.ConsoleTester\bin\Makro.Core.ConsoleTester.dll");
+            service.AddControllerAssembly(assembly);
+            service.Start(Webservice.Implementation.Enums.Protocol.http,"localhost",5112);
+
+            //Makro.Core.ModuleSystem.StartUp.Execute("ModuleConfig.conf");
 
             //Check if multithreading is active
             while (true)

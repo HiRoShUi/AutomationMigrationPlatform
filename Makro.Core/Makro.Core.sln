@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Serialization", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Logging", "Makro.Core.Logging\Makro.Core.Logging.csproj", "{B89768AF-D561-48A8-9EDF-79A8559877F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makro.Core.Webservice", "Makro.Core.Webservice\Makro.Core.Webservice.csproj", "{168B2DC7-F271-407B-9169-AB4757160FD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B89768AF-D561-48A8-9EDF-79A8559877F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{168B2DC7-F271-407B-9169-AB4757160FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168B2DC7-F271-407B-9169-AB4757160FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168B2DC7-F271-407B-9169-AB4757160FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168B2DC7-F271-407B-9169-AB4757160FD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

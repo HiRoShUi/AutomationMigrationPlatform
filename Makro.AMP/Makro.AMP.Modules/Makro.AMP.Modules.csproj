@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03488F52-5C76-46C6-ABD4-6FBD7CFDAAD6}</ProjectGuid>
+    <ProjectGuid>{5F000391-62CE-489A-8108-732338FC347A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Makro.Core.Serialization</RootNamespace>
-    <AssemblyName>Makro.Core.Serialization</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Makro.AMP.Modules</RootNamespace>
+    <AssemblyName>Makro.AMP.Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Makro.Core.Logging">
+      <HintPath>..\..\Makro.Core\Makro.Core.ModuleSystem\bin\Debug\Makro.Core.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Makro.Core.ModuleSystem">
+      <HintPath>..\..\Makro.Core\Makro.Core.ModuleSystem\bin\Debug\Makro.Core.ModuleSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Makro.Core.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Makro.Core\Makro.Core.Settings\bin\Debug\Makro.Core.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Makro.Core.Settings">
+      <HintPath>..\..\Makro.Core\Makro.Core.Settings\bin\Debug\Makro.Core.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Client">
+      <HintPath>..\..\..\webservice\AWA - Source - Current State\de.fme.awa.CRM\bin\Debug\Microsoft.Xrm.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,12 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\NewtonsoftJsonSerializer.cs" />
-    <Compile Include="nsInterfaces\ISerializer.cs" />
+    <Compile Include="ApplicationRunChecker\ApplicationRunCheckerModul.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
