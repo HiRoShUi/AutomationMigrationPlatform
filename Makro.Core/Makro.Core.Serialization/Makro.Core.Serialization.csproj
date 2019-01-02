@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\NewtonsoftJsonSerializer.cs" />
+    <Compile Include="Implementation\XmlSerializer.cs" />
     <Compile Include="nsInterfaces\ISerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,19 +10,18 @@ Example of use:
             service.AddControllerAssembly(assembly);
             service.Start(Webservice.Implementation.Enums.Protocol.http,"localhost",5112);
 ```
-
-			This would start a webservice running with OWIN on port 5112 on the localhost for http. The default webservice would only contain a HealthCheck-Controller under resource "http://localhost:5112/api/HealthCheck" which returns a HttpStatusCode.Ok if a get has been performed.
+This would start a webservice running with OWIN on port 5112 on the localhost for http. The default webservice would only contain a HealthCheck-Controller under resource "http://localhost:5112/api/HealthCheck" which returns a HttpStatusCode.Ok if a get has been performed.
 			
-			A example of a controller that is injected at runtime would be something like: 
+A example of a controller that is injected at runtime would be something like: 
 
-		```csharp
-			 public class TestController: IBasicController
-			{
-				public IHttpActionResult GetValues()
-				{
-					return Ok(new[] { "Testcontroller is up and running on " + Environment.MachineName });
-				}
-			}
-			```
+```csharp
+	public class TestController: IBasicController
+	{
+		public IHttpActionResult GetValues()
+		{
+			return Ok(new[] { "Testcontroller is up and running on " + Environment.MachineName });
+		}
+	}
+```
 
 (C) by MaKro

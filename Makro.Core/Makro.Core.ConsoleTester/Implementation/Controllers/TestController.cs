@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace Makro.Core.ConsoleTester.Implementation.Controllers
 {
-    public class TestController: IBasicController
+    public class TestController : IBasicController
     {
         public IHttpActionResult GetValues()
         {

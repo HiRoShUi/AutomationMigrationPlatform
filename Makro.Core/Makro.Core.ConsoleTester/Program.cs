@@ -31,19 +31,17 @@ namespace Makro.Core.ConsoleTester
             //moduleInstance.Start();
 
             Makro.Core.Webservice.Implementation.Webservice service = new Webservice.Implementation.Webservice();
-
             var assembly = Assembly.LoadFrom(@"C:\Users\Administrator\Documents\Visual Studio 2015\Git\AutomationMigrationPlatform\Makro.Core\Makro.Core.ConsoleTester\bin\Makro.Core.ConsoleTester.dll");
             service.AddControllerAssembly(assembly);
-            service.Start(Webservice.Implementation.Enums.Protocol.http,"localhost",5112);
+            service.Start(Webservice.Implementation.Enums.Protocol.http, "localhost", 5112);
 
             //Makro.Core.ModuleSystem.StartUp.Execute("ModuleConfig.conf");
-
-            //Check if multithreading is active
-            while (true)
-            {
-                Console.WriteLine("Multithreading active");
-                Thread.Sleep(10000);
-            }
+            ////Check if multithreading is active
+            //while (true)
+            //{
+            //    Console.WriteLine("Multithreading active");
+            //    Thread.Sleep(10000);
+            //}
             //Console.ReadKey();
         }
 

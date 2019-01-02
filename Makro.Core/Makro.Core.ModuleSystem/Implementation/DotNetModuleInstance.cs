@@ -76,7 +76,7 @@ namespace Makro.Core.ModuleSystem.Implementation
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                ModuleLogger.Logger.Log(e,MaKro.Core.Logging.LogStage.DEBUG);
             }
         }
 
@@ -84,7 +84,7 @@ namespace Makro.Core.ModuleSystem.Implementation
         {
             //Custom stuff -> delete after debug-phase
             AssemblyContainer container = new AssemblyContainer();
-            var instance = container.GetInstance(Environment.CurrentDirectory, AssemblyName, Type);//.CreateInstance(Type);
+            var instance = container.GetInstance(Environment.CurrentDirectory + "\\bin", AssemblyName, Type);//.CreateInstance(Type);
 
             //end of custom stuff
             // var instance = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(Type);

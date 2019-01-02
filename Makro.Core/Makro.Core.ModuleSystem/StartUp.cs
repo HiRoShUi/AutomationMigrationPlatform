@@ -14,8 +14,17 @@ namespace Makro.Core.ModuleSystem
 {
     public class StartUp
     {
-        protected static ISerializer _serializer = new NewtonsoftJsonSerializer();
+        protected static ISerializer _serializer;
         protected static IList<IModuleInstance> _moduleList;
+
+        /// <summary>
+        /// Inits the serializer as the specified serializer.
+        /// </summary>
+        /// <param name="aiSerializer"></param>
+        public static void InitializeSerializer(ISerializer aiSerializer)
+        {
+            _serializer = aiSerializer;
+        }
 
         /// <summary>
         /// Creates a config with one dummy-value for the TimerTestModul.
@@ -25,6 +34,9 @@ namespace Makro.Core.ModuleSystem
         /// <returns></returns>
         public static string CreateConfigAsString(IList<IModuleInstance> aiModuleInstances)
         {
+            if (_serializer == null)
+                _serializer = new NewtonsoftJsonSerializer();
+
             string aoText = "";
 
             var list = new List<Module>();
@@ -34,14 +46,22 @@ namespace Makro.Core.ModuleSystem
             return aoText;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="aiPath"></param>
+        /// <param name="aiSerializer"></param>
         public static void Execute(string aiPath)
         {
+            if (_serializer == null)
+                _serializer = new NewtonsoftJsonSerializer();
+
             if (!File.Exists(aiPath))
                 return;
 
             _moduleList = new List<IModuleInstance>();
 
-            var config = _serializer.Deserialize<IList<Module>>(File.ReadAllText(aiPath));
+            var config = _serializer.Deserialize<List<Module>>(File.ReadAllText(aiPath));
 
             config
                 .ToList()
@@ -56,6 +76,9 @@ namespace Makro.Core.ModuleSystem
             ExecuteModules();
         }
 
+        /// <summary>
+        /// Executes each module.
+        /// </summary>
         private static void ExecuteModules()
         {
             foreach(var module in _moduleList)
